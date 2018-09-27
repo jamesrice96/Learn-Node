@@ -5,7 +5,7 @@ const storeController = require('../controllers/storeController');
 //Error handling
 const { catchErrors } = require('../handlers/errorHandlers');
 
-// Do work here
+// Do work here - Catch errrors from helper
 router.get('/', storeController.homePage);
 router.get('/add', storeController.addStore);
 router.post('/add', catchErrors(storeController.createStore));

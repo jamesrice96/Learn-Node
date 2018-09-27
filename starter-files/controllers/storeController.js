@@ -10,7 +10,10 @@ exports.addStore = (req, res) => {
 };
 
 exports.createStore = async (req, res) => {
+  //Req = Items from the form submit
   const store = new Store(req.body);
+  //Don't move along until store has saved
   await store.save();
+  //Redirect to homepage
   res.redirect('/');
 };
