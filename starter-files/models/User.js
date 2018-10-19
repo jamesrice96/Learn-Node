@@ -19,7 +19,9 @@ const userSchema = new Schema({
     type: String,
     requried: 'Please supply a name',
     trim: true
-  }
+  },
+  resetPasswordToken: String,
+  resetPasswordExpires: Date
 });
 //Getting a gravatar from email address
 userSchema.virtual('gravatar').get(function() {
