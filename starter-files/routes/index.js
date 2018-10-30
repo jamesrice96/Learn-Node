@@ -64,7 +64,6 @@ router.post(
 );
 
 //Dealing with API
-
 router.get('/api/search', catchErrors(storeController.searchStores));
 
 module.exports = router;
