@@ -21,7 +21,8 @@ const userSchema = new Schema({
     trim: true
   },
   resetPasswordToken: String,
-  resetPasswordExpires: Date
+  resetPasswordExpires: Date,
+  hearts: [{ type: mongoose.Schema.ObjectId, ref: 'Store' }]
 });
 //Getting a gravatar from email address
 userSchema.virtual('gravatar').get(function() {
